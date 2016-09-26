@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, width=640, user-scalable=no maximun-scale=1.0, user-scalable=no" name="viewport">
+        <title>欢迎大家来投票</title>
+        <style media="screen">
+            * {
+              margin: 0;
+              padding: 0;
+            }
+            html , body {
+              width: 100%;
+            }
+            .main {
+              width: 100%;
+              background: #ededeb;
+              text-align: center;
+              padding-bottom: 100px;
+            }
+            .main img {
+              width: 500px;
+            }
+            input {
+              display: inline-block;
+              width: 35px;
+              height: 35px;
+            }
+            p {
+              margin: 50px 0;
+              font-size: 35px;
+              font-weight: 800;
+            }
+            button {
+              padding: 5px 20px;
+              font-size: 40px;
+              border: 1px solid #ccc;
+              border-radius: 8px;
+            }
+            h2 {
+              font-size: 30px;
+              padding: 30px 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <h2>下面👇每个图片中用红圈标出来的名称，<br> 哪个更吸引你，欢迎投票👏</h2>
+            <img src="imgs/1.jpeg" alt="" />
+            <p><input type="radio" name="name" value="A">A</p>
+            <img src="imgs/2.jpeg" alt="" />
+            <p><input type="radio" name="name" value="B">B</p>
+            <img src="imgs/3.jpeg" alt="" />
+            <p><input type="radio" name="name" value="C">C</p>
+            <img src="imgs/4.jpeg" alt="" />
+            <p><input type="radio" name="name" value="D">D</p>
+            <img src="imgs/5.jpeg" alt="" />
+            <p><input type="radio" name="name" value="E">E</p>
+            <button type="button" name="button">提交</button>
+        </div>
+
+    </body>
+    <script type="text/javascript">
+        var btn = document.querySelector("button");
+        var val = document.querySelectorAll("input");
+        btn.onclick = function () {
+            for(var i=0; i<val.length; i ++){
+              if(val[i].checked){
+                  // alert(val[i].value);
+              }
+          }
+        }
+    </script>
+<html>
